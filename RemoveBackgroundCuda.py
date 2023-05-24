@@ -16,7 +16,7 @@ output_path='/home/beams12/S1IDUSER/xiaoxu/laue/XEOLOt'
 input_file=input_path+'/*.tif'
 
 list_temp=sorted(glob.glob(input_file))
-list_img=list_temp[15:16]
+list_img=list_temp[0:1]
 
 img=[]
 
@@ -33,7 +33,7 @@ for img_name in list_img:
  temp=temp.split(".tif")[0]
  temp=int(''.join(filter(str.isdigit,temp)))
  name_digit="%06d" % temp
- temp='HASlong_laue_'+name_digit
+ temp='HASlong_laue_BR_'+name_digit
 
  
  old_image_gpu=imageio.imread(img_name)
